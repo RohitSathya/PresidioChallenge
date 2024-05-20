@@ -25,7 +25,7 @@ const Home = () => {
     try {
         const ud=localStorage.getItem('UserDetail')
         const parse=JSON.parse(ud)
-      const res = await axios.get(`http://localhost:8080/property/properties/${parse._id}`);
+      const res = await axios.get(`https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/property/properties/${parse._id}`);
       const { message, data } = res.data;
       if (message === 'failed') {
         setFetchStatus(0);
@@ -47,7 +47,7 @@ const Home = () => {
     try {
       if (isEditing && currentPropertyId) {
         // Update existing property
-        await axios.put(`http://localhost:8080/property/properties/${currentPropertyId}`, {
+        await axios.put(`https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/property/properties/${currentPropertyId}`, {
           title,
           place,
           area,
@@ -59,7 +59,7 @@ const Home = () => {
         });
       } else {
         // Create new property
-        await axios.post('http://localhost:8080/property/properties', {
+        await axios.post('https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/property/properties', {
           title,
           place,
           area,
@@ -107,7 +107,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/property/properties/${id}`);
+      await axios.delete(`https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/property/properties/${id}`);
       fetchProperties();
     } catch (error) {
       console.error('Failed to delete property:', error);
