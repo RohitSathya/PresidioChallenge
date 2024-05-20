@@ -9,7 +9,7 @@ export default function homebuyer() {
         async function fetchpro(){
             try {
             
-                const res = await axios.get('http://localhost:8080/property/sellerproperties');
+                const res = await axios.get('https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/property/sellerproperties');
                 const { message, data } = res.data;
                 if (message === 'failed') {
                   setFetchStatus(0);
