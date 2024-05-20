@@ -1,0 +1,2 @@
+for frontend npm i to install node_modules and npm run dev to start
+for backend npm i to install node_modules and npm start to start
