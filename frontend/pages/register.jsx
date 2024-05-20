@@ -38,7 +38,7 @@ export default function Register() {
         }
         else{
            
-            const response=await axios.post('http://localhost:8080/api/register',{firstname:firstname,lastname:lastname,email:email,password:password,phone:phone,usertype:usertype})
+            const response=await axios.post('https://presidio-challengeback-cx3st15ph-rohits-projects-a5c6d24a.vercel.app/api/register',{firstname:firstname,lastname:lastname,email:email,password:password,phone:phone,usertype:usertype})
             const {message,ud}=response.data
             if(message=='User Created Succesfully'){
                 toast.success('Registration Completed Successfully')
